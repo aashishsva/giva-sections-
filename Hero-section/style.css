@@ -304,23 +304,23 @@ header{
 .slides {
     display: flex;
     height: 100%;
-    animation: slide 10s infinite 10s ;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: slide 30s infinite; 
 }
 .slide {
     width: 100%;
     height: 100%;
-    flex: 0 0 100%; /* Set each slide to take up 100% of the slider's width */
+    flex: 0 0 100%; 
 }
 @keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(0); }      /* First image visible */
+    25% { transform: translateX(0); }     /* Hold first image */
+    30% { transform: translateX(-100%); } /* Slide to second image */
+    50% { transform: translateX(-100%); } /* Hold second image */
+    55% { transform: translateX(-200%); } /* Slide to third image */
+    75% { transform: translateX(-200%); } /* Hold third image */
+    80% { transform: translateX(-300%); } /* Slide to fourth image */
+    100% { transform: translateX(-300%); }/* Hold fourth image */
 }
-
 
 
 /* --------------CATEGOR WRAPPERS -------------- */
@@ -602,8 +602,35 @@ header{
     background: linear-gradient(to right, #ff4f71, #ff4f71);
 }
 
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background: transparent;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-/* -------------- Recommended------------- */
+.heart-icon {
+    font-size: 35px;
+    color: #ff4f71;
+    transition: color 0.3s ease;
+}
+
+/* .wishlist:hover {
+    background-color: rgba(255, 255, 255, 1);
+} */
+
+.wishlist:hover .heart-icon {
+    color: #ff2a50;
+}
+
+
+
+/* -------------- Shop-by-recipient------------- */
 
 .shop-by-recipient{
     min-width: 100%;
@@ -652,5 +679,357 @@ header{
         height: 100px;
         object-fit: cover;
         transition: transform 0.3s ease;
+    }
+}
+
+/* --------------Most Gifted-------------- */
+.most-gifted{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.most-gifted .badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f53d6b;
+    color: white;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.view-more a{
+    padding: 10px 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.view-more a:hover{
+    background-color: #f8698d;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+/* --------------Promotion image ---------------- */
+.promotion-img{
+    min-width: 100%;
+    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 3;
+}
+
+.promotion-img img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* --------------Gifting guid ---------------- */
+.gifting-guid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-block:50px;
+}
+.gifting-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gifting-imgs img{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+}
+
+/* --------------Trending-------------- */
+.trending{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.trending .badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f53d6b;
+    color: white;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.view-more a{
+    padding: 10px 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.view-more a:hover{
+    background-color: #f8698d;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* --------------Shop by color --------------*/
+
+.shop-by-color{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin-block: 80px;
+    gap: 50px;
+}
+
+.shop-by-color .shop-by-imgs{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.shop-by-color .shop-by-imgs img{
+    min-width: 40%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width:425px) {
+    .shop-by-color .shop-by-imgs{
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
+    }
+    .shop-by-color .shop-by-imgs img{
+        min-width: 100%;
+        height: 400px;
+    }
+}
+
+  
+/* ------------Latest Collecctions-------- */
+
+
+
+
+/* --------------Gold jewellery -------------- */
+.gold-jewellery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 40px; */
+    margin-block: 50px;
+    flex-wrap: wrap;
+
+}
+.gold-wrapper {
+    margin-block: 50px;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gold-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 20px 0; */
+    cursor: pointer;
+}
+
+.gold-item {
+    min-width: 150px;
+    /* margin: 0 15px; */
+    text-align: center;
+}
+
+.gold-item img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gold-item:hover img {
+    transform: scale(1.1);
+}
+
+.gold-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 425px) {
+    .gold-item img {
+        width: 200px;
+        height: 200px;
+    }
+    .gold-item:hover img {
+        transform: none;
+    }
+    
+}
+
+
+.gold-jewellery-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-block: 50px;
+}
+.img-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.img-row img{
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+@media screen and (max-width: 425px) {
+    .img-row img{
+        max-width: 270px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+}
+
+
+/* --------------Essenstials for you-------------- */
+
+.essentials-for-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-block: 50px;
+}
+.essential-for-you-img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.essentials-img-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.essentials-img-row img{
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+@media screen and (max-width: 425px) {
+    .essentials-img-row img{
+        max-width: 270px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+}
+
+
+/* --------------customer stories-------------- */
+
+.customer-stories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-block: 50px;
+}
+.stories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.story-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    min-height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    /* padding: 0 30px; */
+    text-align: center;
+    background-color: #FFF2F5;
+    border-radius: 10px;
+    position: relative; /* Ensure the image is positioned within the card */
+}
+
+.story-card img {
+    position: absolute;
+    bottom: -40px; /* Move it halfway outside the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+.story-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .stories{
+        flex-direction: column;
+        gap: 50px;
+        height: auto;
     }
 }
