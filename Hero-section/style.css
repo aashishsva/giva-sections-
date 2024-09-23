@@ -50,6 +50,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .navbar_1 .logo img{
@@ -882,7 +883,7 @@ header{
     /* border-radius: 50%; */
     box-shadow: 0px 2px 5px black;
 }
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px){
     .collections-wrapper{
         flex-direction: column;
         gap: 80px;
