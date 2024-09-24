@@ -373,7 +373,7 @@ ul li:hover ul.drop{
     gap: 30px;
     list-style-type:none;
     & li{
-        margin: 25px;
+        margin: 15px;
     }
 }
 .slide img{
@@ -599,18 +599,22 @@ ul li:hover ul.drop{
 .wishlist:hover .heart-icon {
     color: #ff2a50;
 }
-.convert button{
-    margin-block: 10px;
-    padding: 10px 20px;
-    background: white;
+.view-more{
+    margin-block: 20px;
+}
+.view-more a{
+    padding: 10px 35px;
     border-radius: 10px;
-    border: 1px solid #888;
+    border: 1px solid black;
 }
 
-.convert button:hover{
-    background-color: #e4e3e3;
+.view-more a:hover{
+    background-color: #f8698d;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
     border: none;
 }
+
 
 
 
@@ -832,7 +836,8 @@ footer{
 .footer__content-middle {
     min-width: 100%; 
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
+    justify-content: space-between;
     align-items: center; 
     gap: 20px; 
     padding: 20px; 
@@ -866,10 +871,11 @@ footer{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding-inline: 50px;
-    }
+    
+}
 .footer-section {
     text-align: left;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .footer-section-title {
@@ -1092,6 +1098,7 @@ footer{
         font-size: 12px; 
     }
 }
+
 
 .help {
     position: fixed;

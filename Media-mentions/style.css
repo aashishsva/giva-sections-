@@ -201,9 +201,6 @@ a{
 
 
 @media (max-width: 1024px) {
-    .header{
-        /* gap: 20px; */
-    }
     .header .navbar_1 {
         flex-direction: column;
         align-items: center;
@@ -430,6 +427,7 @@ a{
 }
 
   
+
 
 
 
@@ -813,6 +811,7 @@ footer{
         font-size: 12px; 
     }
 }
+
 
 
 .help {
