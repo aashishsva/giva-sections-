@@ -373,7 +373,7 @@ ul li:hover ul.drop{
     gap: 30px;
     list-style-type:none;
     & li{
-        margin: 18px;
+        margin: 15px;
     }
 }
 .slide img{
@@ -445,8 +445,8 @@ ul li:hover ul.drop{
 }
 
 
-/* -------------- cherry------------- */
-.cherry{
+/* -------------- gold-with-diamond------------- */
+.gold-with-diamond{
     margin-block: 50px;
     display: flex;
     flex-direction: column;
@@ -455,13 +455,13 @@ ul li:hover ul.drop{
     gap: 50px;
 }
 
-.cherry-section-card{
+.gold-with-diamond-section-card{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
-
+    
 }
 
 .product-card {
@@ -473,6 +473,7 @@ ul li:hover ul.drop{
     /* margin: 20px; */
     text-align: center;
     transition: transform 0.3s ease;
+    /* flex-grow: 1; */
 }
 
 .product-card:hover {
@@ -697,8 +698,6 @@ ul li:hover ul.drop{
         font-size: 12px;
     }
 }
-
-
 
 
 
@@ -1098,6 +1097,8 @@ footer{
         font-size: 12px; 
     }
 }
+
+
 
 .help {
     position: fixed;

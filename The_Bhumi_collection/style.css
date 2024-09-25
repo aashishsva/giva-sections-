@@ -460,12 +460,12 @@ ul li:hover ul.drop{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
 
 }
 
 .product-card {
-    width: 280px;
+    width: 300px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
